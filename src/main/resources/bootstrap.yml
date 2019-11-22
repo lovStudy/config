@@ -18,9 +18,9 @@ spring:
       server:
         git:
           uri: https://github.com/lovStudy/config
-          search-paths: config
           username:
           password:
+          search-paths: myconfig
   rabbitmq:
     host: localhost
     port: 5672
