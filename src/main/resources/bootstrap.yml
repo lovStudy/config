@@ -18,7 +18,7 @@ spring:
       server:
         git:
           uri: https://github.com/lovStudy/config
-          search-paths: /config
+          search-paths: /configs
     bus:
       enabled: true
       trace:
