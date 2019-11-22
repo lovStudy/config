@@ -6,8 +6,6 @@ server:
 spring:
   application:
     name: config
-  profiles:
-    active: native
   cloud:
     consul:
       host: localhost
@@ -18,8 +16,9 @@ spring:
         instance-id: ${spring.application.name}
     config:
       server:
-        native:
-          search-locations: classpath:/config/
+        git:
+          uri: https://github.com/lovStudy/config
+          search-paths: /config
     bus:
       enabled: true
       trace:
