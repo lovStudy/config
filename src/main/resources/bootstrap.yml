@@ -1,0 +1,39 @@
+server:
+  port: 8801
+
+
+
+spring:
+  application:
+    name: config
+  profiles:
+    active: native
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        health-check-path: /actuator/health
+        health-check-interval: 10s
+        instance-id: ${spring.application.name}
+    config:
+      server:
+        native:
+          search-locations: classpath:/config/
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      cors:
+        allowed-methods: "*"
+        allowed-origins: "*"
