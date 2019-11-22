@@ -21,7 +21,6 @@ spring:
           search-paths: config
           username:
           password:
-          force-pull: true
   rabbitmq:
     host: localhost
     port: 5672
